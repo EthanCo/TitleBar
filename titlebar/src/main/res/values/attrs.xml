@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TitleBar">
+        <!--title-->
+        <attr name="title" format="string" />
+        <!--title 字体大小-->
+        <attr name="title_textSize" format="dimension" />
+        <!--其他 字体大小-->
+        <attr name="common_textSize" format="dimension" />
+        <!--titleBar文字颜色-->
+        <attr name="bar_text_color" format="color" />
+
+        <!--左边的文字-->
+        <attr name="leftText" format="string" />
+        <!--左边的图片-->
+        <attr name="leftIc" format="reference" />
+        <!--Padding-->
+        <attr name="leftText_LeftPadding" format="dimension" />
+        <attr name="leftText_RightPadding" format="dimension" />
+        <attr name="leftIc_LeftPadding" format="dimension" />
+        <attr name="leftIc_RightPadding" format="dimension" />
+
+        <!--右边的文字-->
+        <attr name="rightText" format="string" />
+        <!--右边的图片-->
+        <attr name="rightIc" format="reference" />
+        <!--Padding-->
+        <attr name="rightText_LeftPadding" format="dimension" />
+        <attr name="rightText_RightPadding" format="dimension" />
+        <attr name="rightIc_LeftPadding" format="dimension" />
+        <attr name="rightIc_RightPadding" format="dimension" />
+
+        <!--底部divider颜色-->
+        <attr name="bottom_divider_color" format="color" />
+        <!--底部divider是否可见-->
+        <attr name="bottom_divider_visible" format="boolean" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ethanco.titlebarsample.MainActivity">
+
+    <!--?actionBarSize-->
+    <com.ethanco.titlebar.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorAccent"
+        app:bottom_divider_color="#000000"
+        app:bottom_divider_visible="true"
+        app:leftIc="@drawable/ic_back_arrow"
+        app:leftIc_LeftPadding="16dp"
+        app:leftIc_RightPadding="8dp"
+        app:leftText="返回"
+        app:rightIc="@drawable/start"
+        app:rightText="收藏"
+        app:rightText_LeftPadding="8dp"
+        app:rightText_RightPadding="16dp"
+        app:bar_text_color="#FFF"
+        app:title_textSize="20sp"
+        app:common_textSize="16sp"
+        app:title="标题">
+
+    </com.ethanco.titlebar.TitleBar>
+
+</LinearLayout>
