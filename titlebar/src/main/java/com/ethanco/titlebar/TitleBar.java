@@ -5,6 +5,7 @@ import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.AttrRes;
+import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
@@ -102,14 +103,10 @@ public class TitleBar extends RelativeLayout {
     }
 
     private void initCommon(TypedArray ta) {
-        int textSize = (int) ta.getDimension(R.styleable.TitleBar_common_textSize,
-                getResources().getDimension(R.dimen.titlebar_common_text_size));
+        int textSize = (int) ta.getDimension(R.styleable.TitleBar_common_textSize, getResources().getDimension(R.dimen.titlebar_common_text_size));
         int textColor = ta.getColor(R.styleable.TitleBar_bar_text_color, Color.BLACK);
-        tvLeft.setTextSize(textSize);
-        tvRight.setTextSize(textSize);
-        tvLeft.setTextColor(textColor);
-        tvRight.setTextColor(textColor);
-        tvTitle.setTextColor(textColor);
+        setCommonTextSize(textSize);
+        setTextColor(textColor);
     }
 
     private void initBottomDivider(TypedArray ta) {
@@ -174,5 +171,32 @@ public class TitleBar extends RelativeLayout {
 
     public void setOnRightClickListener(View.OnClickListener listener) {
         layoutRight.setOnClickListener(listener);
+    }
+
+    public void setTitle(CharSequence title) {
+        tvTitle.setText(title);
+    }
+
+    public void setTitleTextSize(int textSize){
+        tvTitle.setTextSize(textSize);
+    }
+
+    public void setTextColor(@ColorInt int textColor) {
+        tvLeft.setTextColor(textColor);
+        tvRight.setTextColor(textColor);
+        tvTitle.setTextColor(textColor);
+    }
+
+    private void setCommonTextSize(int textSize) {
+        tvLeft.setTextSize(textSize);
+        tvRight.setTextSize(textSize);
+    }
+
+    public void setLeftText(CharSequence text) {
+        tvLeft.setText(text);
+    }
+
+    public void setRightText(CharSequence text) {
+        tvRight.setText(text);
     }
 }
