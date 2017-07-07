@@ -1,6 +1,8 @@
 # TitleBar #
 Android 标题栏封装，方便使用  
 
+![](http://oqk78xit2.bkt.clouddn.com/17-7-7/53239840.jpg)
+
 ## 添加依赖  
 ### Step 1. Add the JitPack repository to your build file  
 Add it in your root build.gradle at the end of repositories:  

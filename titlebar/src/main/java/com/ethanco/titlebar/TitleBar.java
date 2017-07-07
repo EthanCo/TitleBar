@@ -105,7 +105,7 @@ public class TitleBar extends RelativeLayout {
     private void initCommon(TypedArray ta) {
         int textSize = (int) ta.getDimension(R.styleable.TitleBar_common_textSize, getResources().getDimension(R.dimen.titlebar_common_text_size));
         int textColor = ta.getColor(R.styleable.TitleBar_bar_text_color, Color.BLACK);
-        setCommonTextSize(textSize);
+        setCommonTextSize(DensityUtil.px2sp(getContext(),textSize));
         setTextColor(textColor);
     }
 
@@ -162,7 +162,7 @@ public class TitleBar extends RelativeLayout {
         int titleTextSize = (int) ta.getDimension(R.styleable.TitleBar_title_textSize,
                 getResources().getDimension(R.dimen.titlebar_title_text_size));
         tvTitle.setText(title);
-        tvTitle.setTextSize(titleTextSize);
+        tvTitle.setTextSize(DensityUtil.px2sp(getContext(),titleTextSize));
     }
 
     public void setOnLeftClickListener(View.OnClickListener listener) {
