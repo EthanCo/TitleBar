@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.ethanco.titlebarsample.MainActivity">
 
     <!--?actionBarSize-->
@@ -28,5 +29,17 @@
         app:title="标题">
 
     </com.ethanco.titlebar.TitleBar>
+
+    <com.ethanco.titlebar.TitleBar
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        app:bottom_divider_visible="true"
+        app:title="hello"
+        app:rightIc="@drawable/ic_back_arrow"
+        app:rightIc_RightPadding="20dp"
+        app:rightText_RightPadding="20dp"
+        />
 
 </LinearLayout>

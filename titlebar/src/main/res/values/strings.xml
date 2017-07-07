@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TitleBar</string>
+    <string name="titlebar_back"></string>
 </resources>

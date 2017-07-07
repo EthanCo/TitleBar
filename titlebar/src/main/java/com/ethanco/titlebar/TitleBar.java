@@ -118,23 +118,23 @@ public class TitleBar extends RelativeLayout {
     }
 
     private void initRightText(TypedArray ta) {
-        Drawable rightIc = ta.getDrawable(R.styleable.TitleBar_rightIc);
+        String rightText = ta.getString(R.styleable.TitleBar_rightText);
         int leftPadding = (int) ta.getDimension(
                 R.styleable.TitleBar_rightText_LeftPadding, DEFAULT_ITEM_PADDING);
         int rightPadding = (int) ta.getDimension(
                 R.styleable.TitleBar_rightText_RightPadding, DEFAULT_ITEM_PADDING);
         tvRight.setPadding(leftPadding, 0, rightPadding, 0);
-        imgRight.setImageDrawable(rightIc);
+        tvRight.setText(rightText);
     }
 
     private void initRightIc(TypedArray ta) {
-        String rightText = ta.getString(R.styleable.TitleBar_rightText);
+        Drawable rightIc = ta.getDrawable(R.styleable.TitleBar_rightIc);
         int leftPadding = (int) ta.getDimension(
                 R.styleable.TitleBar_rightIc_LeftPadding, DEFAULT_ITEM_PADDING);
         int rightPadding = (int) ta.getDimension(
                 R.styleable.TitleBar_rightIc_RightPadding, DEFAULT_ITEM_PADDING);
-        tvRight.setPadding(leftPadding, 0, rightPadding, 0);
-        tvRight.setText(rightText);
+        imgRight.setPadding(leftPadding, 0, rightPadding, 0);
+        imgRight.setImageDrawable(rightIc);
     }
 
     private void initLeftText(TypedArray ta) {
@@ -177,7 +177,7 @@ public class TitleBar extends RelativeLayout {
         tvTitle.setText(title);
     }
 
-    public void setTitleTextSize(int textSize){
+    public void setTitleTextSize(int textSize) {
         tvTitle.setTextSize(textSize);
     }
 

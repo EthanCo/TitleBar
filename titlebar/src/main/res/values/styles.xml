@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DefaultTitleBarStyle">
+        <item name="bar_text_color">#FFFFFF</item>
+        <item name="title_textSize">@dimen/titlebar_title_text_size</item>
+        <item name="common_textSize">@dimen/titlebar_common_text_size</item>
+        <item name="leftIc">@drawable/ic_back_arrow</item>
+        <item name="leftText">"返回"</item>
+        <item name="title">"标题"</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
+</resources>
