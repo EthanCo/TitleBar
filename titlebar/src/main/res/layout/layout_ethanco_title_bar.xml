@@ -34,19 +34,6 @@
             android:layout_height="1px"
             android:layout_weight="1" />
 
-        <TextView
-            android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:text="标题"
-            android:textSize="@dimen/titlebar_title_text_size" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1px"
-            android:layout_weight="1" />
-
         <LinearLayout
             android:id="@+id/layout_right"
             android:layout_width="wrap_content"
@@ -68,6 +55,14 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="标题"
+        android:textSize="@dimen/titlebar_title_text_size" />
 
     <View
         android:id="@+id/view_bottom_divider"
