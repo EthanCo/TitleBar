@@ -2,6 +2,7 @@ package com.ethanco.titlebar;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.AttrRes;
@@ -12,7 +13,9 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -75,6 +78,7 @@ public class TitleBar extends RelativeLayout {
         findView();
 
         TypedArray ta = getTitleBarTypedArray(context, attrs);
+        initPadding(ta);
         initCommon(ta);
         initTitleText(ta);
         initLeftIc(ta);
@@ -102,10 +106,19 @@ public class TitleBar extends RelativeLayout {
         dividerBottom = root.findViewById(R.id.view_bottom_divider);
     }
 
+    private void initPadding(TypedArray ta) {
+        int leftPadding = (int) ta.getDimension(R.styleable.TitleBar_left_padding, 0);
+        int rightPadding = (int) ta.getDimension(R.styleable.TitleBar_right_padding, 0);
+        LinearLayout layoutRoot = (LinearLayout) findViewById(R.id.layout_toolbar);
+        FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(layoutRoot.getLayoutParams());
+        lp.setMargins(leftPadding, 0, rightPadding, 0);
+        layoutRoot.setLayoutParams(lp);
+    }
+
     private void initCommon(TypedArray ta) {
         int textSize = (int) ta.getDimension(R.styleable.TitleBar_common_textSize, getResources().getDimension(R.dimen.titlebar_common_text_size));
         int textColor = ta.getColor(R.styleable.TitleBar_bar_text_color, Color.BLACK);
-        setCommonTextSize(DensityUtil.px2sp(getContext(),textSize));
+        setCommonTextSize(DensityUtil.px2sp(getContext(), textSize));
         setTextColor(textColor);
     }
 
@@ -162,7 +175,7 @@ public class TitleBar extends RelativeLayout {
         int titleTextSize = (int) ta.getDimension(R.styleable.TitleBar_title_textSize,
                 getResources().getDimension(R.dimen.titlebar_title_text_size));
         tvTitle.setText(title);
-        tvTitle.setTextSize(DensityUtil.px2sp(getContext(),titleTextSize));
+        tvTitle.setTextSize(DensityUtil.px2sp(getContext(), titleTextSize));
     }
 
     public void setOnLeftClickListener(View.OnClickListener listener) {
@@ -196,7 +209,63 @@ public class TitleBar extends RelativeLayout {
         tvLeft.setText(text);
     }
 
+    public void setLeftTextVisible(int visible) {
+        tvLeft.setVisibility(visible);
+    }
+
+    public TextView getLeftText() {
+        return tvLeft;
+    }
+
     public void setRightText(CharSequence text) {
         tvRight.setText(text);
+    }
+
+    public void setRightTextVisible(int visible) {
+        tvRight.setVisibility(visible);
+    }
+
+    public TextView getRightTextView() {
+        return tvRight;
+    }
+
+    public void setLeftImg(int resId) {
+        imgLeft.setImageResource(resId);
+    }
+
+    public void setLeftImg(Drawable drawable) {
+        imgLeft.setImageDrawable(drawable);
+    }
+
+    public void setLeftImg(Bitmap bitmap) {
+        imgLeft.setImageBitmap(bitmap);
+    }
+
+    public void setLeftImgVisible(int visible) {
+        imgLeft.setVisibility(visible);
+    }
+
+    public ImageView getLeftImg() {
+        return imgLeft;
+    }
+
+    public void setRightImg(int resId) {
+        imgRight.setImageResource(resId);
+    }
+
+    public void setRightImg(Drawable drawable) {
+        imgRight.setImageDrawable(drawable);
+    }
+
+    public void setRightImg(Bitmap bitmap) {
+        imgRight.setImageBitmap(bitmap);
+    }
+
+    public void setRightImgVisible(int visible) {
+        imgRight.setVisibility(visible);
+    }
+
+    public ImageView getRightImg() {
+        return imgRight;
     }
 }

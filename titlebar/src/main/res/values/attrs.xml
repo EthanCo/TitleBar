@@ -19,6 +19,8 @@
         <attr name="leftText_RightPadding" format="dimension" />
         <attr name="leftIc_LeftPadding" format="dimension" />
         <attr name="leftIc_RightPadding" format="dimension" />
+        <attr name="left_padding" format="dimension"/>
+        <attr name="right_padding" format="dimension"/>
 
         <!--右边的文字-->
         <attr name="rightText" format="string" />

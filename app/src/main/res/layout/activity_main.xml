@@ -7,6 +7,8 @@
     android:orientation="vertical"
     tools:context="com.ethanco.titlebarsample.MainActivity">
 
+    <!--app:leftIc_LeftPadding="8dp"-->
+    <!--app:rightText_RightPadding="16dp"-->
     <!--?actionBarSize-->
     <com.ethanco.titlebar.TitleBar
         android:id="@+id/title_bar"
@@ -16,13 +18,14 @@
         app:bottom_divider_color="#D8D9DA"
         app:bottom_divider_visible="true"
         app:leftIc="@drawable/ic_return"
-        app:leftIc_LeftPadding="8dp"
         app:leftIc_RightPadding="2dp"
+        app:leftIc_LeftPadding="-8dp"
+        app:left_padding="16dp"
+        app:right_padding="16dp"
         app:leftText="返回"
         app:rightIc="@drawable/ic_star"
         app:rightText="收藏"
         app:rightText_LeftPadding="8dp"
-        app:rightText_RightPadding="16dp"
         app:bar_text_color="#FFF"
         app:title_textSize="20sp"
         app:common_textSize="16sp"
@@ -126,4 +129,10 @@
         app:title_textSize="20sp"
         app:common_textSize="16sp"
         app:title="标题"/>
+
+    <Button
+        android:text="改变"
+        android:id="@+id/btn_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>
