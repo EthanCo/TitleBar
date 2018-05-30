@@ -18,7 +18,7 @@ maven { url 'https://www.jitpack.io' }
 ### Step 2. Add the dependency  
 ```Grovy
 dependencies {
-    compile 'com.github.EthanCo:TitleBar:1.0.3'
+    compile 'com.github.EthanCo:TitleBar:1.0.5'
 }
 ```  
 ## 使用  
@@ -75,3 +75,9 @@ bottom_divider_visible | 底部divider是否可见
 
 #### setTitle  
 设置标题
+
+#### setLeftText
+设置左边文字
+
+#### setRightText
+设置右边文字

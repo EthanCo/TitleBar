@@ -29,5 +29,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "right click!", Toast.LENGTH_SHORT).show();
             }
         });
+
+        //titleBar.setLeftText("Hello");
+        //titleBar.setRightText("World");
     }
 }
