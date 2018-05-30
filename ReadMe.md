@@ -64,7 +64,10 @@ rightText_RightPadding | 右边的文字的rightPadding
 rightIc_LeftPadding | 右边的图片的leftPadding
 rightIc_RightPadding | 右边的图片的rightPadding
 bottom_divider_color | 底部divider颜色
-bottom_divider_visible | 底部divider是否可见  
+bottom_divider_visible | 底部divider是否可见
+left_padding | TitleBar左边的Padding  
+right_padding | TitleBar右边的Padding
+  
 
 ### 设置监听  
 #### setOnLeftClickListener  
