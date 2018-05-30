@@ -18,7 +18,7 @@ maven { url 'https://www.jitpack.io' }
 ### Step 2. Add the dependency  
 ```Grovy
 dependencies {
-    compile 'com.github.EthanCo:TitleBar:1.0.5'
+    compile 'com.github.EthanCo:TitleBar:1.0.6'
 }
 ```  
 ## 使用  
@@ -81,3 +81,33 @@ bottom_divider_visible | 底部divider是否可见
 
 #### setRightText
 设置右边文字
+
+#### setLeftTextVisible
+设置左边文字是否显示
+
+#### getLeftText
+获取左边的TextView
+
+#### setRightTextVisible
+设置右边的TextView是否显示
+
+#### getRightTextView
+获取右边的TextView
+    
+#### setLeftImg
+设置左边的ImageView src
+
+#### setLeftImgVisible
+设置左边的ImageVi 是否可见
+
+#### getLeftImg
+获取左边的ImageView
+
+#### setRightImg
+设置右边的ImageView
+
+#### setRightImgVisible
+设置右边的ImageView 是否可见
+
+#### getRightImg
+获取右边的ImageView
